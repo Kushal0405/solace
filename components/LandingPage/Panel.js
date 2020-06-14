@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import MyPanel from './ExpansionPanel/MyPanel'
-import Head from 'next/head'
 
 const Panel = () => {
   const [expanded, setExpanded] = useState(false);
@@ -11,9 +10,6 @@ const Panel = () => {
 
   return (
     <div className="panel">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <MyPanel
         onChange={handleChange}
         panelName={"panel1"}

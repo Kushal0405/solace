@@ -22,6 +22,7 @@
   padding: 20px 0;
   height: 1000px;
   .top-title {
+    font-family: $serif-font;
     color: white;
     text-align: center;
     font-weight: 900;
@@ -87,12 +88,31 @@
 }
 
 .parallax-inner {
-  padding: 100px 0;
+  padding: 100px 0 0;
+}
+
+.trans-center {
+  padding-bottom: 300px;
 }
 
 .bottom {
-  height: 800px;
-  background-image: $background-gradient;
+  padding: 20px;
+  background-color: #eee;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: space-around;
+  .mid-way {
+    transform: translate(0, -50%);
+  }
+  .bottom-title {
+    color: #3f4955;
+    top: 500px;
+    text-align: center;
+    font-family: $serif-font;
+    font-size: 55px;
+    font-weight: 900;
+  }
 }
 
 .transparent-card {
@@ -104,6 +124,9 @@
   }
   .span-2 {
     font-weight: 500;
+  }
+  .small-text {
+    font-size: 25px;
   }
   img {
     width: 100%;
@@ -117,20 +140,46 @@
 .quote-card {
   color: white;
   background-image: $background-gradient;
-  padding: 20px;
+  padding: 30px;
   display: flex;
+  justify-content: center;
   .quote-left {
-    width: 30%;
+    width: 20%;
+    .quotecard-logo {
+      // max-height: 200px;
+      max-width: 70%;
+      padding-top: 20px;
+      // max-width: 200px;
+    }
   }
   .quote-symbol:before {
     content: '“';
+    height: 100px;
     font-weight: 600;
-    font-family: Catamaran;
-    font-size: 200px;
+    font-size: 180px;
     line-height: 1;
     color: rgb(63, 73, 85);
   }
+  // }
   .quote-right {
+    width: 50%;
     color: white;
+    .quote-text {
+      font-family: $serif-font;
+      font-size: 23px;
+      margin: 20px 0;
+    }
+    .author {
+      display: flex;
+      .author-img {
+        border-radius: 50%;
+        max-width: 140px;
+        margin: 20px 0;
+      }
+      .author-desc {
+        align-self: center;
+        margin-left: 15px;
+      }
+    }
   }
 }

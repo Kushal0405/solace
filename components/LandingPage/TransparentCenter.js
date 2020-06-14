@@ -2,7 +2,7 @@ import TransparentCard from './TransparentCard/TransparentCard'
 
 const TransparentCenter = () => {
   return (
-    <div>
+    <div className="trans-center">
       <TransparentCard>
         A Solace-enabled event mesh makes innovation possible by streaming events from across your organization and IoT assets to the applications and services that need them—regardless of what language they are written in and where they are located (on-premises, a private cloud, a VPC, or the Public Cloud.)
       </TransparentCard>
