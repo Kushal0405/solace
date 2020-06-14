@@ -1,0 +1,12 @@
+$theme-color: #20c997;
+$background-gradient: linear-gradient(38deg, #20262b 34%, #3c4652 100%);
+
+* {
+  margin: 0;
+  ::selection {
+    background: $theme-color;
+  }
+  a::selection {
+    color: white;
+  }
+}

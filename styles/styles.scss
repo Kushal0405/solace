@@ -1,5 +1,136 @@
 @import 'common';
 
-.container {
-  background: red;
+// replace dimensions by data
+// .top {
+//   height: 500px;
+//   background-color: #3b4550;
+//   color: white;
+//   padding-top: 20px;
+//   display: flex;
+//   justify-content: center;
+//   p {
+//     font-weight: 900;
+//     font-size: 55px;
+//     text-align: center;
+//   }
+// }
+
+.top {
+  display: flex;
+  flex-direction: column;
+  background-image: $background-gradient;
+  padding: 20px 0;
+  height: 1000px;
+  .top-title {
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 55px;
+    padding-bottom: 100px;
+  }
+  .top-content {
+    display: flex;
+    justify-content: center;
+    .top-left {
+      width: 50%;
+      padding: 50px;
+    }
+    .top-right {
+      width: 50%;
+      padding: 50px;
+
+      // Panel styling
+      .panel {
+        width: 500px;
+        // margin: auto;
+
+        .MuiPaper-root {
+          background-color: #0d6974;
+          margin: 2px 0;
+          height: 60px;
+        }
+        .Mui-expanded {
+          height: auto;
+          .MuiExpansionPanelSummary-root {
+            background-color: gray;
+          }
+        }
+
+        .MuiButtonBase-root {
+          .MuiExpansionPanelSummary-root {
+            height: 30px;
+          }
+        }
+
+        .MuiExpansionPanelDetails-root {
+          background-color: #ffffff;
+        }
+        .summary {
+          font-weight: 500;
+          font-size: 25px;
+          color: #ffffff;
+        }
+        .details {
+          color: #474747;
+          font-size: 18px;
+          padding: 10px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+.parallax {
+  background: #fff url('/background.svg') no-repeat -50% center / 200% auto;
+  background-attachment: fixed;
+}
+
+.parallax-inner {
+  padding: 100px 0;
+}
+
+.bottom {
+  height: 800px;
+  background-image: $background-gradient;
+}
+
+.transparent-card {
+  color: #3f4955;
+  font-size: 32px;
+  padding: 50px 0;
+  .span-1 {
+    font-weight: 700;
+  }
+  .span-2 {
+    font-weight: 500;
+  }
+  img {
+    width: 100%;
+  }
+  a {
+    color: $theme-color;
+    text-decoration: none;
+  }
+}
+
+.quote-card {
+  color: white;
+  background-image: $background-gradient;
+  padding: 20px;
+  display: flex;
+  .quote-left {
+    width: 30%;
+  }
+  .quote-symbol:before {
+    content: '“';
+    font-weight: 600;
+    font-family: Catamaran;
+    font-size: 200px;
+    line-height: 1;
+    color: rgb(63, 73, 85);
+  }
+  .quote-right {
+    color: white;
+  }
 }
