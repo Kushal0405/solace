@@ -1,8 +1,10 @@
-const QuotesCard = ({ image1, image2, quote1, quote2, author, desc, company }) => {
+// import 
+
+const QuotesCard = ({ image1, image2, quote1, quote2, author, desc, company, imgClassName }) => {
   return (
     <div className="quote-card">
       <div className="quote-left">
-        {image1 && <img src={image1} alt="Logo" className="quotecard-logo" />}
+        {image1 && <img src={image1} alt="Logo" className={`quotecard-logo ${imgClassName}`} />}
       </div>
       <div className="quote-symbol"></div>
       <div className="quote-right">
@@ -20,6 +22,10 @@ const QuotesCard = ({ image1, image2, quote1, quote2, author, desc, company }) =
       </div>
     </div>
   )
+}
+
+QuotesCard.defaultProps = {
+  imgClassName: ""
 }
 
 export default QuotesCard

@@ -1,20 +1,5 @@
 @import 'common';
 
-// replace dimensions by data
-// .top {
-//   height: 500px;
-//   background-color: #3b4550;
-//   color: white;
-//   padding-top: 20px;
-//   display: flex;
-//   justify-content: center;
-//   p {
-//     font-weight: 900;
-//     font-size: 55px;
-//     text-align: center;
-//   }
-// }
-
 .top {
   display: flex;
   flex-direction: column;
@@ -32,13 +17,14 @@
   .top-content {
     display: flex;
     justify-content: center;
+
     .top-left {
-      width: 50%;
-      padding: 50px;
+      width: 60%;
+      padding: 20px;
     }
     .top-right {
-      width: 50%;
-      padding: 50px;
+      width: 30%;
+      padding: 20px;
 
       // Panel styling
       .panel {
@@ -82,30 +68,111 @@
   }
 }
 
+// .card-simple {
+//   padding: 20px;
+//   background-color: #00c895;
+//   border-radius: 20px;
+//   .card-title {
+//     text-transform: uppercase;
+//     font-weight: 700;
+//     letter-spacing: 2px;
+//     font-size: 20px;
+//     text-align: center;
+//     color: #474747;
+//   }
+// }
+
+.card-simple {
+  padding: 20px;
+  background-color: #00c895;
+  box-shadow: 10px 20px 40px -16px rgba(0, 0, 0, 0.63);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  min-width: 500px;
+  .card-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: #474747;
+  }
+  .wrapper {
+    margin: 10px;
+  }
+  .dark {
+    color: #474747;
+  }
+  .inner-card {
+    padding: 20px;
+    background-color: #0d6974;
+    box-shadow: 10px 20px 40px -16px rgba(0, 0, 0, 0.63);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .card-top {
+    display: flex;
+    justify-content: center;
+    .card-left {
+      width: 40%;
+    }
+    .card-right {
+      width: 60%;
+    }
+  }
+  .card-details {
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    justify-content: space-evenly;
+    .divider:before {
+      content: '|';
+      font-family: 'Playfair Display';
+      font-size: 35px;
+      font-weight: 100;
+      padding: 0 10px 0;
+    }
+    .inner-title {
+      font-size: 16px;
+    }
+    .inner-details {
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+}
+
 .parallax {
   background: #fff url('/background.svg') no-repeat -50% center / 200% auto;
   background-attachment: fixed;
 }
 
 .parallax-inner {
-  padding: 100px 0 0;
+  position: relative;
 }
 
 .trans-center {
-  padding-bottom: 300px;
+  padding: 100px 20px 300px;
+  max-width: 992px;
+  align-content: center;
+  margin: 0 auto;
+}
+.mid-way {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(0, -50%);
 }
 
 .bottom {
-  padding: 20px;
+  padding: 300px 0 0;
   background-color: #eee;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: space-around;
-  .mid-way {
-    transform: translate(0, -50%);
-  }
   .bottom-title {
+    display: relative;
     color: #3f4955;
     top: 500px;
     text-align: center;
@@ -138,11 +205,14 @@
 }
 
 .quote-card {
+  box-shadow: 0 64px 24px -50px rgba(0, 0, 0, 0.2);
   color: white;
   background-image: $background-gradient;
   padding: 30px;
   display: flex;
   justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
   .quote-left {
     width: 20%;
     .quotecard-logo {
@@ -150,6 +220,9 @@
       max-width: 70%;
       padding-top: 20px;
       // max-width: 200px;
+    }
+    .solace-logo {
+      width: 70% !important;
     }
   }
   .quote-symbol:before {
