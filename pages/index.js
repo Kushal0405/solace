@@ -3,21 +3,28 @@ import Layout from '../components/Layout/Layout'
 import TransparentCenter from '../components/LandingPage/TransparentCenter'
 import QuotesCard from '../components/ui/QuotesCard'
 import TransparentCard from '../components/ui/TransparentCard'
-import IntroCard from '../components/LandingPage/IntroCard'
-
+import IntroCard from '../components/LandingPage/IntroCard';
+import TopSection from '../components/LandingPage/TopSection';
+import Head from 'next/head'
 const Index = () => {
   return (
+
+    
     <div>
+      
+      <TopSection/>
+    <div>
+     
       <div className="top"> {/*Parallex important class*/}
         <Layout>
           <div className="top-title">
             The complete event management platform.
           </div>
-          <div className="top-content">
-            <div className="top-left">
+          <div className="top-content row">
+            <div className="top-left col-sm-12 col-md-6">
               <IntroCard />
             </div>
-            <div className="top-right">
+            <div className="top-right col-sm-12 col-md-6">
               <Panel />
             </div>
           </div>
@@ -59,6 +66,7 @@ const Index = () => {
         />
       </div>
     </div>
+  </div>
   )
 }
 
