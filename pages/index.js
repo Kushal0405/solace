@@ -16,7 +16,7 @@ const Index = () => {
     <div>
      
       <div className="top"> {/*Parallex important class*/}
-        <Layout>
+        {/* <Layout>
           <div className="top-title">
             The complete event management platform.
           </div>
@@ -28,7 +28,18 @@ const Index = () => {
               <Panel />
             </div>
           </div>
-        </Layout>
+        </Layout> */}
+        <div className="wrapper">
+          <div className="intro-title">
+            The complete event management platform.
+          </div>
+          <div className="intro-card">
+            <IntroCard />
+          </div>
+          <div className="intro-panel">
+            <Panel />
+          </div>
+        </div>
       </div>
       <section className="parallax"> {/*Parallex important class*/}
         <div className="parallax-inner">

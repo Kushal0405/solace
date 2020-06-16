@@ -1,70 +1,147 @@
 @import 'common';
 
+// .top {
+//   display: flex;
+//   flex-direction: column;
+//   background-image: $background-gradient;
+//   padding: 20px 0;
+//   height: 1000px;
+//   .top-title {
+//     font-family: $serif-font;
+//     color: white;
+//     text-align: center;
+//     font-weight: 900;
+//     font-size: 55px;
+//     padding-bottom: 100px;
+//   }
+//   .top-content {
+//     display: flex;
+//     justify-content: center;
+
+//     .top-left {
+//       width: 60%;
+//       padding: 20px;
+//     }
+//     .top-right {
+//       width: 30%;
+//       padding: 20px;
+
+//       // Panel styling
+//       .panel {
+//         width: 500px;
+//         // margin: auto;
+
+//         .MuiPaper-root {
+//           background-color: #0d6974;
+//           margin: 2px 0;
+//           height: 60px;
+//         }
+//         .Mui-expanded {
+//           height: auto;
+//           .MuiExpansionPanelSummary-root {
+//             background-color: gray;
+//           }
+//         }
+
+//         .MuiButtonBase-root {
+//           .MuiExpansionPanelSummary-root {
+//             height: 30px;
+//           }
+//         }
+
+//         .MuiExpansionPanelDetails-root {
+//           background-color: #ffffff;
+//         }
+//         .summary {
+//           font-weight: 500;
+//           font-size: 25px;
+//           color: #ffffff;
+//         }
+//         .details {
+//           color: #474747;
+//           font-size: 18px;
+//           padding: 10px;
+//           line-height: 1.5;
+//         }
+//       }
+//     }
+//   }
+// }
+
 .top {
-  display: flex;
-  flex-direction: column;
   background-image: $background-gradient;
-  padding: 20px 0;
-  height: 1000px;
-  .top-title {
+  min-height: 600px;
+  .wrapper {
+    display: grid;
+    justify-items: center;
+  }
+  .intro-title {
     font-family: $serif-font;
     color: white;
     text-align: center;
     font-weight: 900;
     font-size: 55px;
-    padding-bottom: 100px;
+    grid-column: 1/3;
+    padding: 10px;
   }
-  .top-content {
-    display: flex;
-    justify-content: center;
-
-    .top-left {
-      width: 60%;
-      padding: 20px;
+  .intro-card {
+    justify-self: right;
+    padding: 20px 0;
+  }
+  .intro-panel {
+    justify-self: left;
+    padding: 20px;
+  }
+  @media (max-width: 768px) {
+    .intro-title {
+      grid-column: 1;
     }
-    .top-right {
-      width: 30%;
-      padding: 20px;
-
-      // Panel styling
-      .panel {
-        width: 500px;
-        // margin: auto;
-
-        .MuiPaper-root {
-          background-color: #0d6974;
-          margin: 2px 0;
-          height: 60px;
-        }
-        .Mui-expanded {
-          height: auto;
-          .MuiExpansionPanelSummary-root {
-            background-color: gray;
-          }
-        }
-
-        .MuiButtonBase-root {
-          .MuiExpansionPanelSummary-root {
-            height: 30px;
-          }
-        }
-
-        .MuiExpansionPanelDetails-root {
-          background-color: #ffffff;
-        }
-        .summary {
-          font-weight: 500;
-          font-size: 25px;
-          color: #ffffff;
-        }
-        .details {
-          color: #474747;
-          font-size: 18px;
-          padding: 10px;
-          line-height: 1.5;
-        }
-      }
+    .intro-card {
+      justify-self: center;
     }
+    .intro-panel {
+      justify-self: center;
+    }
+    .panel {
+      width: 100%;
+    }
+  }
+}
+
+.panel {
+  width: 500px;
+  min-width: 420px;
+  .MuiPaper-root {
+    background-color: #0d6974;
+    margin: 2px 0;
+    height: 60px;
+  }
+  .Mui-expanded {
+    height: auto;
+    .MuiExpansionPanelSummary-root {
+      background-color: gray;
+    }
+  }
+
+  .MuiButtonBase-root {
+    .MuiExpansionPanelSummary-root {
+      height: 30px;
+    }
+  }
+
+  .MuiExpansionPanelDetails-root {
+    background-color: #ffffff;
+  }
+  .summary {
+    font-weight: 500;
+    font-size: 25px;
+    color: #ffffff;
+  }
+  .details {
+    color: #474747;
+    font-size: 18px;
+    padding: 10px;
+    line-height: 1.5;
   }
 }
 
@@ -90,7 +167,8 @@
   color: white;
   text-align: center;
   font-weight: 700;
-  width: 100%;
+  max-width: 700px;
+  max-height: 700px;
   min-width: 500px;
   .card-title {
     text-transform: uppercase;
@@ -117,9 +195,11 @@
     justify-content: center;
     .card-left {
       width: 40%;
+      min-width: 216px;
     }
     .card-right {
       width: 60%;
+      min-width: 290px;
     }
   }
   .card-details {
