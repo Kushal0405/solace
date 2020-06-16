@@ -1,4 +1,4 @@
-import TransparentCard from '../ui/TransparentCard'
+import TransparentCard from '../UI/TransparentCard'
 
 const TransparentCenter = () => {
   return (
