@@ -5,6 +5,7 @@ import QuotesCard from '../components/ui/QuotesCard'
 import TransparentCard from '../components/ui/TransparentCard'
 import IntroCard from '../components/LandingPage/IntroCard';
 import TopSection from '../components/LandingPage/TopSection';
+import Footer from '../components/LandingPage/TopSection/footr';
 import Head from 'next/head'
 const Index = () => {
   return (
@@ -57,7 +58,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <div className="bottom"> {/*Parallex important class*/}
+      <div className="bottom" style={{paddingBottom:'40px'}}> {/*Parallex important class*/}
         <p className="bottom-title">How does Solace enable an event mesh?</p>
         <Layout width="md">
           <TransparentCard>
@@ -77,6 +78,7 @@ const Index = () => {
         />
       </div>
     </div>
+    <Footer/>
   </div>
   )
 }

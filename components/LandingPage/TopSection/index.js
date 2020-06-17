@@ -1,113 +1,148 @@
-import React, { Component } from 'react';
-import Head from 'next/head';
+import React, { Component } from 'react'
 import Container from '@material-ui/core/Container'
-import { BsSearch } from "react-icons/bs";
-import { TiDownload } from "react-icons/ti";
-import Grid from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box';
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import { Popover } from '@material-ui/core';
+import {TiDownload} from 'react-icons/ti'
+import {FiSearch} from 'react-icons/fi'
 
 
-export default class TopSection extends Component {
-  render() {    
+export default function TopSection () {
+      const textH1 = {
+          fontFamily :'open-sans',
+          color:'#00C895',
+          fontSize:'55px',
+          fontWeight:'700',
+          marginBottom:'40px'
+      }
+      const textH3 = {
+        fontFamily :'open-sans',
+        color:'white',
+        fontSize:'32px',
+        fontWeight:'600',
+        marginBottom:'40px'
+    }
+    const link={
+        background:'#00C895', 
+        textAlign:'center', 
+        fontWeight:'500',
+        fontSize:'18px',
+        color:'white',
+        padding:'10px', 
+        margin:'30px',
+        marginLeft:'130px'
+    }
+    const covid = {
+        background:'white',
+        text:'disabled',
+        padding:'20px',
+        marginBottom:'50px'
+    }
+    const image ={
+        backgroundImage:'url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTWo-X5pXxLSNqOGtPpngJz6tjKuIu0YlhRSq3t2mnsGgPr6PaM&usqp=CAU")',
+        backgroundRepeat:'noRepeat',
+        backgroundSize:'cover'
+    }
 
-        const brand ={
-    fontFamily: "open-sans",
-    fontWeight: 600,
-    color: '#00C895',
-}
+    
+    const useStyles = makeStyles((theme) => ({
+      root: {
+        flexGrow: 1,
+      },
+      menuButton: {
+        marginRight: theme.spacing(2),
+      },
+      title: {
+        flexGrow: 1,
+        marginRight:'40px'
+      },
+      subMenu:{
+        color:'white',
+        margin:'20px'
+      },
+      mainMenu:{
+        color:'white',
+        margin:'20px',
+        fontWeight:'300',
+        fontSize:'20px'
+      }
+    }));
+    const classes = useStyles();
     
     return (
-      <React.Fragment >
-        <Head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        </Head>
-        <div style={{background:'#212527'}}>
-        <Container >
-        <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse " id="navbarNav">
-            <ul className=" navbar-nav navbar-right ml-auto " >
-                    <li className="nav-item">
-                        <a className="nav-link text-light pr-4"style={{fontWeight:'500'}} href="#">Docs</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link text-light pr-4 "style={{fontWeight:'500'}} href="#">Resources</a>
-                    </li>
-                    <li className="nav-item">
-                       <a className="nav-link text-light pr-4 "style={{fontWeight:'500'}} href="#">Blog</a>
-                    </li>
-                    <li className="nav-item">
-                       <a className="nav-link text-light pr-4 "style={{fontWeight:'500'}} href="#">Learn</a>
-                    </li>
-                    <li className="nav-item">
-                       <a className="nav-link text-light pr-4" style={{fontWeight:'500'}} href="#">Downloads</a>
-                    </li>
-                    <li className="nav-item">
-                       <a className="nav-link text-light pr-4 " style={{fontWeight:'500'}} href="#">Support</a>
-                    </li>
-                    <li className="nav-item">
-                       <a className="nav-link text-light pr-4" style={{fontWeight:'500'}} href="#">Contact</a>
-                    </li>
-                    <li className="nav-item">
-                       <a className="nav-link text-light pr-4" style={{fontWeight:'500'}} href="#">Login</a>
-                    </li>
-                    <li className="nav-item">
-                       <span  className="text-light mt-2 pr-4 "><BsSearch/></span> 
-                    </li>
-                 </ul>
-              
-            </div>
-            </nav>
-      
-            <br></br>
-         <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-            <img className="navbar-brand" src="https://cdn.solace.com/wp-content/themes/orbit-media/resources/images/solace-logo-white.png" width="260px" height="70px" />
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse " id="navbarNav">
-                <ul className="navbar-nav ml-auto">
-                <li className="nav-item pr-3 ">
-                    <a style={{fontSize:'20px'}} className="nav-link text-light" href="#">Products</a>
-                </li>
-                <li className="nav-item pr-3">
-                    <a style={{fontSize:'20px'}} className="nav-link text-light " href="#">Use Cases</a>
-                </li>
-                <li className="nav-item pr-3">
-                    <a  style={{fontSize:'20px'}} className="nav-link text-light" href="#">Solace With</a>
-                </li>
-                <li className="nav-item pr-3">
-                    <a style={{fontSize:'20px'}} className="nav-link text-light" href="#">Company</a>
-                </li>
-                <li className="nav-item pr-3">
-                    <a style={{fontSize:'20px'}} className="nav-link text-light" href="#">Developers</a>
-                </li>
-                <li className="nav-item pr-3">
-                <a className="text-light btn btn-outline-light  "style={{fontWeight:'700',borderRadius:'40px', fontSize:'20px'}} href="#">Get pubSub+ for free</a>
-                </li>
-                </ul>
-            </div>
-            </nav>
-       </Container>
-        <div className="container">
-        <div  className="mt-5 pb-5 row" >
-        <div className="col-md-6 col-sm-12" item xs={6}>
-         <h1 style={{color:'#00C895', fontSize:'50px', fontWeight:'600', fontFamily:'open-sans'}}>Building the digital backbone for real-time enterprises.</h1>
-         <h3 style={{color:'white',  fontSize:'32px', fontWeight:'400', fontFamily:'open-sans',marginTop:'30px'}}>Everything you need to get your business events streaming on an <abbr title="think of it as modern messaging middleware">event mesh,</abbr> plus what you need to discover, manage and govern them.</h3>
-         <h5  style={{color:'white', marginTop:'10px'}} className="mt-5"><span style={{color:'#00C895'}}><TiDownload/></span>Download FREE production-ready software</h5>
-        </div>
-        <div className="col-md-6 col-sm-12" item xs={6}>
-        <div className="card  w-100">
-            <img className="card-img-top" src='https://play.vidyard.com/gJ2pSxSS9Ad3jpxaT2Q7Ly.jpg' alt="Card image cap"/>
-              </div> 
-              <a className="text-light btn btn-outline-success mt-5 "style={{marginLeft:'125px',borderRadius:'40px'}} href="#">Request an event mesh demo</a>
-
-        </div>
-        </div>
-        </div>
+      <React.Fragment>
+          <div style={image}>
+              <Container>
+          <Grid direction="row"
+                justify="space-around"
+                alignItems="baseline"
+            >
+            <div className={classes.root}>
+                  <AppBar position="static" color='transparent'>
+                    <Toolbar>
+                      <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                       <MenuIcon />
+                          </IconButton>
+                          <Typography variant="h6" className={classes.title}>
+                           </Typography>
+                       <span className={classes.subMenu} color="inherit">Docs</span>
+                       <span className={classes.subMenu} color="inherit">Resources</span>
+                       <span className={classes.subMenu} color="inherit">Blog</span>
+                       <span className={classes.subMenu} color="inherit">Learn</span>
+                       <span className={classes.subMenu} color="inherit">Downloads</span>
+                       <span className={classes.subMenu} color="inherit">Support</span>
+                       <span className={classes.subMenu} color="inherit">Contact</span>
+                       <span className={classes.subMenu} color="inherit">Login</span>
+                       <span className={classes.subMenu} color="inherit"><FiSearch/></span>
+                    </Toolbar>
+                   </AppBar>
+              </div>
+              <div className={classes.root}>
+                  <AppBar position="static" color='transparent'>
+                    <Toolbar>
+                      <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                       <MenuIcon />
+                          </IconButton>
+                          <Typography variant="h6" className={classes.title}>
+                              <img  src="https://cdn.solace.com/wp-content/uploads/2019/10/solace_logo_green.svg" width="200" height="70"/>
+                           </Typography>
+                       <span className={classes.mainMenu} color="inherit">Products</span>
+                       <span className={classes.mainMenu} color="inherit">Use Cases</span>
+                       <span className={classes.mainMenu} color="inherit">Solace With</span>
+                       <span className={classes.mainMenu} color="inherit">Company</span>
+                       <span className={classes.mainMenu} color="inherit">Developers</span>
+                       <Box className={classes.mainMenu} color="inherit">Get pubSub+ for free</Box>
+                    </Toolbar>
+                   </AppBar>
+              </div>
+             </Grid>
+             </Container>
+              <Container>
+                        <div style={covid}>
+                        Regarding COVID-19: Here’s what we’re doing to ensure the support and welfare of our employees, customers and partners.   Learn More
+                        </div>
+              </Container>
+                <Container maxwidth="md">
+                <Grid container spacing={10} >
+                        <Grid item  md={6}>
+                            <h1 style={textH1}>Building the digital backbone for real-time enterprises.</h1>
+                            <h3 style={textH3}>Everything you need to get your business events streaming on an event mesh, plus what you need to discover, manage and govern them.</h3>
+                            <p style={{fontSize:'18px', color:'white'}}> <TiDownload  style={{color:'00C895'}}/>Download <u>FREE</u> production-ready software</p>
+                        </Grid>
+                        <Grid item md={6}>
+                            <img src="https://play.vidyard.com/gJ2pSxSS9Ad3jpxaT2Q7Ly.jpg" width="550" height="300"/>
+                            <Box width={2/4} borderRadius={25} variant='contained' style={link}>Request a event mesh demo</Box>                      
+                        </Grid>
+                </Grid>
+                </Container>
         </div>
       </React.Fragment>
     )
-  }
+  
 }
