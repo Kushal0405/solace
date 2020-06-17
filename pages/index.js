@@ -7,6 +7,7 @@ import IntroCard from '../components/LandingPage/IntroCard'
 import Features from '../components/LandingPage/Features'
 import Clients from '../components/LandingPage/Clients'
 import Partners from '../components/LandingPage/Partners'
+import Solution from '../components/LandingPage/Solution'
 
 const Index = () => {
   return (
@@ -80,6 +81,7 @@ const Index = () => {
           <p className="bottom-title">The only unified and tomorrow-proof solution</p>
 
           {/* Grid 1*/}
+          <Solution />
 
         </div>
         <p className="bottom-title">“It didn’t even break a sweat.”</p>
