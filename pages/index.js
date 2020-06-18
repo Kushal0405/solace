@@ -8,21 +8,29 @@ import Features from '../components/LandingPage/Features'
 import Clients from '../components/LandingPage/Clients'
 import Partners from '../components/LandingPage/Partners'
 import Solution from '../components/LandingPage/Solution'
-import Options from '../components/LandingPage/Options'
+import Options from '../components/LandingPage/Options,
+import TopSection from '../components/LandingPage/TopSection';
+import Footer from '../components/LandingPage/TopSection/footr';
 
 const Index = () => {
   return (
+
+    
     <div>
+      
+      <TopSection/>
+    <div>
+     
       <div className="top"> {/*Parallex important class*/}
         {/* <Layout>
           <div className="top-title">
             The complete event management platform.
           </div>
-          <div className="top-content">
-            <div className="top-left">
+          <div className="top-content row">
+            <div className="top-left col-sm-12 col-md-6">
               <IntroCard />
             </div>
-            <div className="top-right">
+            <div className="top-right col-sm-12 col-md-6">
               <Panel />
             </div>
           </div>
@@ -56,7 +64,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <div className="bottom"> {/*Parallex important class*/}
+      <div className="bottom" style={{paddingBottom:'40px'}}> {/*Parallex important class*/}
         <p className="bottom-title p-top">How does Solace enable an event mesh?</p>
         <Layout width="md">
           <TransparentCard>
@@ -108,6 +116,8 @@ const Index = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+  </div>
   )
 }
 
