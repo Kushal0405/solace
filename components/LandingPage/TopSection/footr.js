@@ -11,6 +11,11 @@ export default function Footer () {
       listStyleType:'none',
       color:'white',
       margin:'40px'
+    },
+    bottom:{
+      
+      color:'white',
+      
     }
   }));
   const classes = useStyles();
@@ -57,15 +62,15 @@ export default function Footer () {
                       </ul>
                   </Grid>
                   <Grid item md={4}>
-                        <ul className={classes.list}>
-                            <li><img src="https://cdn.solace.com/wp-content/themes/orbit-media/resources/images/solace-logo-white.png" width="200" height="80"/></li>
-                            <li>Newsletter Signup</li>
-                            <li>Join 3,000 others receiving product updates + insights into the event-driven future.</li>
-                            <li>  <TextField id="outlined-basic" size="small" borderRadius={20} variant="outlined" /> </li>
-                            <li>Support</li>
-                            <li>Contract</li>
-                            <li>Log In</li>
-                      </ul>
+                      
+                            <img src="https://cdn.solace.com/wp-content/themes/orbit-media/resources/images/solace-logo-white.png" width="100" height="50"/><br></br>
+                            <span className={classes.bottom}>Newsletter Signup</span><br></br>
+                            <span className={classes.bottom}>Join 3,000 others receiving product updates + insights into the event-driven future.</span>
+                            <span className={classes.bottom}> <TextField id="outlined-basic" size="small" borderRadius={20} variant="outlined" /></span>
+                          Support
+                          Contract
+                            Log In
+                      
                   </Grid>
                 </Grid>
               </Container>

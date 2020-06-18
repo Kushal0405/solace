@@ -11,7 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Popover } from '@material-ui/core';
 import {TiDownload} from 'react-icons/ti'
 import {FiSearch} from 'react-icons/fi'
-
+import Popmenu from './popover'
 
 export default function TopSection () {
       const textH1 = {
@@ -68,7 +68,6 @@ export default function TopSection () {
       },
       mainMenu:{
         color:'white',
-        margin:'20px',
         fontWeight:'300',
         fontSize:'20px'
       }
@@ -78,6 +77,7 @@ export default function TopSection () {
     return (
       <React.Fragment>
           <div style={image}>
+            
               <Container>
           <Grid direction="row"
                 justify="space-around"
@@ -86,10 +86,8 @@ export default function TopSection () {
             <div className={classes.root}>
                   <AppBar position="static" color='transparent'>
                     <Toolbar>
-                      <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                       <MenuIcon />
-                          </IconButton>
-                          <Typography variant="h6" className={classes.title}>
+              
+                          <Typography  className={classes.title}>
                            </Typography>
                        <span className={classes.subMenu} color="inherit">Docs</span>
                        <span className={classes.subMenu} color="inherit">Resources</span>
@@ -106,18 +104,12 @@ export default function TopSection () {
               <div className={classes.root}>
                   <AppBar position="static" color='transparent'>
                     <Toolbar>
-                      <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                       <MenuIcon />
-                          </IconButton>
-                          <Typography variant="h6" className={classes.title}>
-                              <img  src="https://cdn.solace.com/wp-content/uploads/2019/10/solace_logo_green.svg" width="200" height="70"/>
+                      
+                          <Typography  className={classes.title}>
+                              <img style={{marginLeft:'-30px'}} src="https://cdn.solace.com/wp-content/uploads/2019/10/solace_logo_green.svg" width="200" height="70"/>
                            </Typography>
-                       <span className={classes.mainMenu} color="inherit">Products</span>
-                       <span className={classes.mainMenu} color="inherit">Use Cases</span>
-                       <span className={classes.mainMenu} color="inherit">Solace With</span>
-                       <span className={classes.mainMenu} color="inherit">Company</span>
-                       <span className={classes.mainMenu} color="inherit">Developers</span>
-                       <Box className={classes.mainMenu} color="inherit">Get pubSub+ for free</Box>
+                       <span className={classes.mainMenu} color="inherit"><Popmenu/></span>
+        
                     </Toolbar>
                    </AppBar>
               </div>

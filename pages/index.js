@@ -6,7 +6,6 @@ import TransparentCard from '../components/ui/TransparentCard'
 import IntroCard from '../components/LandingPage/IntroCard';
 import TopSection from '../components/LandingPage/TopSection';
 import Footer from '../components/LandingPage/TopSection/footr';
-import Head from 'next/head'
 const Index = () => {
   return (
 
