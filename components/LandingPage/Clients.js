@@ -1,3 +1,5 @@
+import { Grid } from '@material-ui/core'
+
 const Clients = () => {
   return (
     <div className="clients mid-way attached-top">
@@ -8,6 +10,7 @@ const Clients = () => {
         <img src="" className="client-logo mqtt" />
         <img src="" className="client-logo paho" />
         <img src="" className="client-logo websocket" />
+        <img src="" className="client-logo restful" />
         <img src="" className="client-logo node" />
       </div>
     </div>

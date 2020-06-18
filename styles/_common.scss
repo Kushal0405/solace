@@ -9,7 +9,26 @@ $theme-font-color: #3f4955;
   ::selection {
     background: $theme-color;
   }
+  font-family: 'Open Sans';
   a::selection {
     color: white;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin midsize {
+  @media (max-width: 1280px) {
+    @content;
   }
 }

@@ -1,4 +1,4 @@
-// import 
+import { Grid } from '@material-ui/core'
 
 const QuotesCard = ({ image1, image2, quote1, quote2, author, desc, company, imgClassName }) => {
   return (
@@ -14,7 +14,7 @@ const QuotesCard = ({ image1, image2, quote1, quote2, author, desc, company, img
         <div className="author">
           {image2 && <img src={image2} alt="Author" className="author-img" />}
           <div className="author-desc">
-            {author && <h1>{author}</h1>}
+            {author && <p className="author-name">{author}</p>}
             {desc && <p>{desc}</p>}
             {company && <p>{company}</p>}
           </div>

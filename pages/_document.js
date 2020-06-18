@@ -1,7 +1,13 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
-// import theme from './theme';
+
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+// AOS.init();
+
+
 
 export default class MyDocument extends Document {
   render() {
@@ -10,14 +16,16 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" />
-          <link
+          {/* <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
-          />
+          /> */}
+          <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
           <link
             href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
             rel="stylesheet"
           />
+          {/* <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link> */}
         </Head>
         <body>
           <Main />

@@ -8,6 +8,7 @@ import Features from '../components/LandingPage/Features'
 import Clients from '../components/LandingPage/Clients'
 import Partners from '../components/LandingPage/Partners'
 import Solution from '../components/LandingPage/Solution'
+import Options from '../components/LandingPage/Options'
 
 const Index = () => {
   return (
@@ -56,7 +57,7 @@ const Index = () => {
         </div>
       </section>
       <div className="bottom"> {/*Parallex important class*/}
-        <p className="bottom-title">How does Solace enable an event mesh?</p>
+        <p className="bottom-title p-top">How does Solace enable an event mesh?</p>
         <Layout width="md">
           <TransparentCard>
             <span className="small-text">
@@ -73,7 +74,7 @@ const Index = () => {
           company="SOLACE"
           imgClassName="solace-logo"
         />
-        <p className="bottom-title">What makes a Solace-enabled event mesh unique?</p>
+        <p className="bottom-title p-top-all">What makes a Solace-enabled event mesh unique?</p>
         <Features />
         <div className="button btn-lg">Learn more about event mesh</div>
         <div className="bottom-section-dark">
@@ -98,6 +99,7 @@ const Index = () => {
           <p className="bottom-title">One platform. Three options.​</p>
 
           {/* Grid 2 */}
+          <Options />
 
         </div>
         <p className="bottom-title">Proven in the most demanding use cases</p>
