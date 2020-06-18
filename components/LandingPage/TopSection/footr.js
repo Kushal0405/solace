@@ -69,7 +69,7 @@ export default function Footer () {
                             <span className={classes.bottom}> <TextField id="outlined-basic" size="small" borderRadius={20} variant="outlined" /></span>
                           Support
                           Contract
-                            Log In
+                            Log Ingit
                       
                   </Grid>
                 </Grid>
