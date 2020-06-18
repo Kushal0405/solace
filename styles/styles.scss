@@ -825,3 +825,60 @@
   }
 }
 
+.organization {
+  max-width: 1400px;
+  background-color: white;
+  position: absolute;
+  color: black;
+  text-align: center;
+  box-shadow: 0 64px 24px -50px rgba(0, 0, 0, 0.2);
+  padding: 30px 0;
+  p {
+    font-size: 25px;
+    font-weight: 600;
+    // padding: 40px 0 0;
+  }
+  .logos-section {
+    display: flex;
+    justify-content: space-around;
+  }
+  .organization-logo {
+    max-width: 200px;
+  } 
+  .barclays {
+    content: url('/barclays-white.png');
+  }
+  .barclays:hover {
+    content: url('/barclays.png');
+  }
+ .sap {
+    content: url('/sap-black.png');
+  }
+.sap:hover {
+    content: url('/sap-blue.png');
+  }
+.airtel{
+   content : url('/airte_white.png')
+  }
+.airtel:hover{
+    content: url('/airtel.png')
+  }
+ .rbc{
+   content : url('/white_rbc.png')
+ }
+ .rbc:hover {
+   content : url('/rbc.png')
+ }
+ .gr{
+   content: url('./white_gr.png')
+ }
+ .gr:hover{
+   content : url('./Groupr.png')
+ }
+    @include midsize {
+    margin: auto 25px;
+    .client-logo {
+      width: 10%;
+    }
+  }
+}

@@ -8,19 +8,23 @@ import Features from '../components/LandingPage/Features'
 import Clients from '../components/LandingPage/Clients'
 import Partners from '../components/LandingPage/Partners'
 import Solution from '../components/LandingPage/Solution'
-import Options from '../components/LandingPage/Options,
+import Options from '../components/LandingPage/Options'
 import TopSection from '../components/LandingPage/TopSection';
 import Footer from '../components/LandingPage/TopSection/footr';
+import Organization from '../components/LandingPage/organization'
+import { Fade } from 'react-reveal'
 
 const Index = () => {
   return (
 
     
-    <div>
-      
-      <TopSection/>
-    <div>
+    <div >
+      <div> <TopSection/></div>
      
+    <div>
+     <div style={{position:'relative', top:'120px'}}>
+       <Organization/>
+     </div>
       <div className="top"> {/*Parallex important class*/}
         {/* <Layout>
           <div className="top-title">
@@ -36,7 +40,7 @@ const Index = () => {
           </div>
         </Layout> */}
         <div className="wrapper">
-          <div className="intro-title">
+          <div className="intro-title" style={{paddingTop:'150px'}}>
             The complete event management platform.
           </div>
           <div className="intro-card">
@@ -103,12 +107,11 @@ const Index = () => {
 
         {/* Next */}
         <div className="bottom-section-dark">
-          <Partners />
+        <Fade bottom><Partners /></Fade>
           <p className="bottom-title">One platform. Three options.​</p>
 
           {/* Grid 2 */}
           <Options />
-
         </div>
         <p className="bottom-title">Proven in the most demanding use cases</p>
         <div className="image-centering">

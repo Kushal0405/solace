@@ -47,7 +47,8 @@ export default function TopSection () {
     const image ={
         backgroundImage:'url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTWo-X5pXxLSNqOGtPpngJz6tjKuIu0YlhRSq3t2mnsGgPr6PaM&usqp=CAU")',
         backgroundRepeat:'noRepeat',
-        backgroundSize:'cover'
+        backgroundSize:'cover',
+        paddingBottom:'250px'
     }
 
     

@@ -63,7 +63,7 @@ export default function Footer () {
                   </Grid>
                   <Grid item md={4}>
                       
-                            <img src="https://cdn.solace.com/wp-content/themes/orbit-media/resources/images/solace-logo-white.png" width="100" height="50"/><br></br>
+                            <img src="https://cdn.solace.com/wp-content/themes/orbit-media/resources/images/solace-logo-white.png" width="150" height="50"/><br></br>
                             <span className={classes.bottom}>Newsletter Signup</span><br></br>
                             <span className={classes.bottom}>Join 3,000 others receiving product updates + insights into the event-driven future.</span>
                             <span className={classes.bottom}> <TextField id="outlined-basic" size="small" borderRadius={20} variant="outlined" /></span>
