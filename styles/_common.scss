@@ -1,13 +1,34 @@
 $theme-color: #20c997;
 $background-gradient: linear-gradient(38deg, #20262b 34%, #3c4652 100%);
+$secondary-gradient: linear-gradient(131deg, #00c895 0%, #12b39b 52%);
 $serif-font: 'Times New Roman', Times, serif;
+$theme-font-color: #3f4955;
 
 * {
   margin: 0;
   ::selection {
     background: $theme-color;
   }
+  font-family: 'Open Sans';
   a::selection {
     color: white;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin midsize {
+  @media (max-width: 1280px) {
+    @content;
   }
 }
