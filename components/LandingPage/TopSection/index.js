@@ -33,7 +33,7 @@ const TopSection = () => {
     <div className="main-wrapper">
       <ParticlesBackground />
       <div className="container">
-        <Grid container spacing={8} justify="center">
+        <Grid container spacing={2} justify="center">
           <Grid item md={12}>
             <div className="navbar-1">
               <span className="sub-menu">Docs</span>

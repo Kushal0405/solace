@@ -10,7 +10,9 @@ import Partners from '../components/LandingPage/Partners'
 import Solution from '../components/LandingPage/Solution'
 import Options from '../components/LandingPage/Options'
 import TopSection from '../components/LandingPage/TopSection';
-import Footer from '../components/LandingPage/TopSection/footr';
+// import Footer1 from '../components/LandingPage/TopSection/footr';
+import Footer from '../components/LandingPage/Footer/Footer'
+import FixedBottom from '../components/LandingPage/FixedBottom'
 
 const Index = () => {
   return (
@@ -113,6 +115,7 @@ const Index = () => {
         </div>
       </div>
       <Footer />
+      <FixedBottom />
     </div>
   )
 }
