@@ -870,10 +870,10 @@
    content : url('/rbc.png')
  }
  .gr{
-   content: url('./white_gr.png')
+   content: url('/white_gr.png')
  }
  .gr:hover{
-   content : url('./Groupr.png')
+   content : url('/Groupr.png')
  }
     @include midsize {
     margin: auto 25px;
