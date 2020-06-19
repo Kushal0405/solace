@@ -2,13 +2,6 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-// AOS.init();
-
-
-
 export default class MyDocument extends Document {
   render() {
     return (
@@ -16,6 +9,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
           {/* <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"

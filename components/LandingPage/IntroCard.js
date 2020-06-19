@@ -71,7 +71,7 @@ const IntroCard = () => {
         <div className="card-details">
           <p className="inner-title dark">Authentication</p>
           <span className="divider dark"></span>
-          <p className="inner-title dark">Encryption</p>
+          <p className="inner-title dark">Authorization</p>
           <span className="divider dark"></span>
           <p className="inner-title dark">Encryption</p>
         </div>

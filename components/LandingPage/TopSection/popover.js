@@ -1,6 +1,5 @@
 import React from 'react';
 import Popover from '@material-ui/core/Popover';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -10,11 +9,11 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(1),
   },
-  mainMenu:{
-    color:'white',
-    margin:'20px',
-    fontWeight:'300',
-    fontSize:'20px'
+  mainMenu: {
+    color: 'white',
+    margin: '20px',
+    fontWeight: '300',
+    fontSize: '20px'
   }
 }));
 
@@ -41,37 +40,8 @@ export default function Popmenu() {
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
       >
-        <span style={{color:'white'}}>Products</span>
-      </span>
-      <Popover
-        id="mouse-over-popover"
-        className={classes.popover}
-        classes={{
-          paper: classes.paper,
-        }}
-        open={open}
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        onClose={handlePopoverClose}
-        disableRestoreFocus
-      >
-        <React.Fragment><div>I use Popover.</div></React.Fragment>
-      </Popover>
-      <span
-      className={classes.mainMenu}
-        aria-owns={open ? 'mouse-over-popover' : undefined}
-        aria-haspopup="true"
-        onMouseEnter={handlePopoverOpen}
-        onMouseLeave={handlePopoverClose}
-      >
-        <span style={{color:'white'}}>Use Cases</span>
+
+        <span style={{ color: 'white' }}>Products</span>
       </span>
       <Popover
         id="mouse-over-popover"
@@ -101,7 +71,37 @@ export default function Popmenu() {
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
       >
-        <span style={{color:'white'}}>Solace With</span>
+        <span style={{ color: 'white' }}>Use Cases</span>
+      </span>
+      <Popover
+        id="mouse-over-popover"
+        className={classes.popover}
+        classes={{
+          paper: classes.paper,
+        }}
+        open={open}
+        anchorEl={anchorEl}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        onClose={handlePopoverClose}
+        disableRestoreFocus
+      >
+        <React.Fragment><div className="popup">I use Popover.</div></React.Fragment>
+      </Popover>
+      <span
+        className={classes.mainMenu}
+        aria-owns={open ? 'mouse-over-popover' : undefined}
+        aria-haspopup="true"
+        onMouseEnter={handlePopoverOpen}
+        onMouseLeave={handlePopoverClose}
+      >
+        <span style={{ color: 'white' }}>Solace With</span>
       </span>
       <Popover
         id="mouse-over-popover"
@@ -131,7 +131,7 @@ export default function Popmenu() {
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
       >
-        <span style={{color:'white'}}>Company</span>
+        <span style={{ color: 'white' }}>Company</span>
       </span>
       <Popover
         id="mouse-over-popover"
@@ -161,7 +161,7 @@ export default function Popmenu() {
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
       >
-        <span style={{color:'white'}}>Developer</span>
+        <span style={{ color: 'white' }}>Developer</span>
       </span>
       <span
         className={classes.mainMenu}
@@ -170,7 +170,7 @@ export default function Popmenu() {
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
       >
-        <span style={{color:'white'}}>Get PubSub+ for free</span>
+        <span className="clear-button">Get PubSub+ for free</span>
       </span>
       <Popover
         id="mouse-over-popover"
@@ -193,7 +193,7 @@ export default function Popmenu() {
       >
         <React.Fragment><div>I use Popover.</div></React.Fragment>
       </Popover>
-      
+
     </div>
   );
 }
