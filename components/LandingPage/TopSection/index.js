@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -12,7 +11,8 @@ import { TiDownload } from 'react-icons/ti'
 import { FiSearch } from 'react-icons/fi'
 import Popmenu from './popover'
 import { Tooltip } from '@material-ui/core'
-// import ParticlesBackground from './ParticlesBackground'
+import dynamic from 'next/dynamic'
+const ParticlesBackground = dynamic(() => import('./ParticlesBackground'), { ssr: false })
 
 const TopSection = () => {
   const useStyles = makeStyles((theme) => ({
@@ -31,7 +31,7 @@ const TopSection = () => {
 
   return (
     <div className="main-wrapper">
-      {/* <ParticlesBackground /> */}
+      <ParticlesBackground />
       <div className="container">
         <Grid container spacing={8} justify="center">
           <Grid item md={12}>
