@@ -1,6 +1,10 @@
+import React from 'react'
+import { Typography } from "@material-ui/core"
+
 const Numbers = () => {
   return (
     <div className="numbers">
+      <Typography></Typography>
       <div className="number-holder">
         <div className="number-holder-title">
           <p>By the numbers</p>

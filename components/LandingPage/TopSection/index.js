@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -12,6 +12,7 @@ import { FiSearch } from 'react-icons/fi'
 import Popmenu from './popover'
 import { Tooltip } from '@material-ui/core'
 import dynamic from 'next/dynamic'
+import Blank from './'
 const ParticlesBackground = dynamic(() => import('./ParticlesBackground'), { ssr: false })
 
 const TopSection = () => {
