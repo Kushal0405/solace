@@ -67,7 +67,9 @@
 //     }
 //   }
 // }
-
+.body {
+  scroll-behavior: smooth;
+}
 .top {
   background-image: $background-gradient;
   min-height: 600px;
@@ -580,6 +582,7 @@
 
 // Buttons
 .button {
+ 
   font-weight: 600;
   font-size: 16px;
   text-align: center;
@@ -876,8 +879,8 @@
    content : url('/Groupr.png')
  }
     @include midsize {
-    margin: auto 25px;
-    .client-logo {
+    margin: auto;
+    .organization-logo {
       width: 10%;
     }
   }

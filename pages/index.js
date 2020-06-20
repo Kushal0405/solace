@@ -1,4 +1,3 @@
-import Panel from '../components/LandingPage/Panel'
 import Layout from '../components/Layout/Layout'
 import TransparentCenter from '../components/LandingPage/TransparentCenter'
 import QuotesCard from '../components/UI/QuotesCard'
@@ -9,21 +8,25 @@ import Clients from '../components/LandingPage/Clients'
 import Partners from '../components/LandingPage/Partners'
 import Solution from '../components/LandingPage/Solution'
 import Options from '../components/LandingPage/Options'
-import TopSection from '../components/LandingPage/TopSection';
-import Footer from '../components/LandingPage/TopSection/footr';
+import TopSection from '../components/LandingPage/TopSection'
+import Footer from '../components/LandingPage/TopSection/footr'
 import Organization from '../components/LandingPage/organization'
+import Panel from '../components/LandingPage/Panel'
 import { Fade } from 'react-reveal'
 
 const Index = () => {
   return (
+    <React.Fragment>
 
     
     <div >
       <div> <TopSection/></div>
      
     <div>
-     <div style={{position:'relative', top:'120px'}}>
-       <Organization/>
+     <div style={{position:'relative', top:'100px'}}>
+       <Fade bottom>
+           <Organization/>
+       </Fade>
      </div>
       <div className="top"> {/*Parallex important class*/}
         {/* <Layout>
@@ -40,7 +43,7 @@ const Index = () => {
           </div>
         </Layout> */}
           <div className="wrapper">
-            <div className="intro-title">
+            <div  style={{paddingTop:'120px'}} className="intro-title">
               The complete event management platform.
           </div>
             <div className="intro-card">
@@ -55,6 +58,7 @@ const Index = () => {
           <div className="parallax-inner">
             <TransparentCenter />
             <div className="mid-way attached-bottom">
+              <Fade bottom>
               <QuotesCard
                 quote1={"65 billion messages a day. That’s 750,000 messages a second, 24 hours a day. That’s huge volume, and we do all that completely seamlessly without any data loss.”"}
                 quote2={"Used by 6 of the 10 world’s biggest investment banks and 3 of the top 6 FX trading banks, Solace PubSub+ meets the diverse data movement needs of banks, capital markets participants, and exchanges."}
@@ -64,19 +68,22 @@ const Index = () => {
                 desc="Managing Director, Global Head of Shared Application Services"
                 company="RBC CAPITAL MARKETS"
                 imgClassName="rbc-logo"
-              />
+              /></Fade>
             </div>
           </div>
         </section>
         <div className="bottom" style={{ paddingBottom: '40px' }}> {/*Parallex important class*/}
           <p className="bottom-title p-top">How does Solace enable an event mesh?</p>
           <Layout width="md">
+            <Fade bottom>
             <TransparentCard>
               <span className="small-text">
                 Solace enables an event mesh with PubSub+, our advanced event brokers. You create an event mesh with Solace by deploying PubSub+ in any/all your environments (public/private clouds, on premises), and then connecting them, at which point all applications, microservices, cloud services, SaaS, iPaaS and legacy systems connected to an event broker in the mesh will be instantly and continuously connected with one another.
             </span>
             </TransparentCard>
+            </Fade>
           </Layout>
+          <Fade bottom>
           <QuotesCard
             quote1={"Events will become the life blood of the modern enterprise. Businesses that will lead in innovation, client experience, and efficiency will be those that enable events to flow freely and easily across every environment and component of the digital enterprise.”"}
             image1="/solace_green.svg"
@@ -85,7 +92,7 @@ const Index = () => {
             desc="Chief Technology Officer"
             company="SOLACE"
             imgClassName="solace-logo"
-          />
+          /></Fade>
           <p className="bottom-title p-top-all">What makes a Solace-enabled event mesh unique?</p>
           <Features />
           <div className="button btn-lg">Learn more about event mesh</div>
@@ -94,34 +101,44 @@ const Index = () => {
             <p className="bottom-title">The only unified and tomorrow-proof solution</p>
 
             {/* Grid 1*/}
+          
             <Solution />
-
+            
           </div>
+          <Fade bottom>
           <p className="bottom-title">“It didn’t even break a sweat.”</p>
           <p className="small-text">VoiceBase is an AI-powered speech analytics company with a customer base that includes Twilio, AWS, and Tableau. When their VP of engineering, Jeff Shukis, built a prototype that simulated 2.7 billion minutes of processing per month, “several times what YouTube takes in,” only PubSub+ could handle the demand.
-        </p>
+        </p></Fade>
+        <Fade bottom>
           <div className="image-centering">
             <img src="https://play.vidyard.com/1Fov7X3fbs4f531JyriVbh.jpg" alt="Video Thumbnail" />
-          </div>
+          </div></Fade>
           <div className="button btn-md">See more use cases</div>
 
           {/* Next */}
           <div className="bottom-section-dark">
+            <Fade bottom>
             <Partners />
+            </Fade>
             <p className="bottom-title">One platform. Three options.​</p>
 
             {/* Grid 2 */}
+
             <Options />
 
           </div>
-          <p className="bottom-title">Proven in the most demanding use cases</p>
-          <div className="image-centering">
+          <Fade bottom>
+          <p className="bottom-title">Proven in the most demanding use cases</p></Fade>
+          <Fade bottom>
+            <div className="image-centering">
             <img src="https://play.vidyard.com/n86sLadmBwxW9hVY12Gbgi.jpg" alt="Video Thumbnail" />
           </div>
+          </Fade>
         </div>
       </div>
       <Footer />
     </div>
+    </React.Fragment>
   )
 }
 
