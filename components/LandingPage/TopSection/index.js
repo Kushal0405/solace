@@ -1,7 +1,5 @@
-
 import React from 'react'
 import Grid from "@material-ui/core/Grid"
-import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import {Toolbar} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -14,6 +12,7 @@ import Solacewith from './solacewith'
 import Company from './company'
 import { Tooltip } from '@material-ui/core'
 import dynamic from 'next/dynamic'
+import '../../../styles/top-section.scss'
 const ParticlesBackground = dynamic(() => import('./ParticlesBackground'), { ssr: false })
 
 const TopSection = () => {
@@ -35,7 +34,7 @@ const TopSection = () => {
     <div className="main-wrapper">
       <ParticlesBackground />
       <div className="container">
-        <Grid container spacing={2} justify="center">
+        <Grid container spacing={8} justify="center">
           <Grid item md={12}>
             <div className="navbar-1">
               <span className="sub-menu">Docs</span>
@@ -61,7 +60,7 @@ const TopSection = () => {
                 <span className="menu-icon">
                   <MenuIcon />
                 </span>
-              </Toolbar>
+              </Toolbar>""
             </div>
             <div className="covid-banner">
               <p>Regarding COVID-19: Here’s what we’re doing to ensure the support and welfare of our employees, customers and partners. <span>Learn More</span></p>
@@ -69,10 +68,10 @@ const TopSection = () => {
           </Grid>
           <Grid item md={6}>
             <div className="left-side">
-              <h1 className="text-1">Building the digital backbone for real-time <Typer className="text-1" dataText={['Enterprises.', 'Startups.', 'Companies.']} /></h1>
-              <h3 className="text-2">Everything you need to get your business events streaming on an <Tooltip style={{ width: '400px' }} placement="top" arrow={true} title={<React.Fragment>
-                <Typography color="inherit"><h4 style={{ color: 'white', borderColor: '#20c997' }}><u>Think of it as moderen mesaging middleware</u></h4></Typography>
-                <span>An event mesh is a configureable and dynamic infrastructure layer for distrubuting events among decoupled applications, cloud services and devices</span>
+              <h1 className="text-1">Building the digital backbone for real-time Entriprises</h1>
+              <h3 className="text-2">Everything you need to get your business events streaming on an <Tooltip style={{ width: '500px' }} placement="top" arrow={true} title={<React.Fragment>
+                <Typography color="inherit"><h4 style={{ color: 'white', borderColor: '#20c997' , fontSize:'20px'}}><u>Think of it as moderen mesaging middleware</u></h4></Typography>
+                <h5 style={{fontSize:'15px', padding:'10px'}}>An event mesh is a configureable and dynamic infrastructure layer for distrubuting events among decoupled applications, cloud services and devices</h5>
               </React.Fragment>}><span className="tooltip">event mesh</span></Tooltip>, plus what you need to discover, manage and govern them.</h3>
               <p style={{ fontSize: '18px', color: 'white' }}> <TiDownload style={{ color: '00C895' }} /> Download <u>FREE</u> production-ready software</p>
             </div>
