@@ -1,6 +1,9 @@
 @import 'common';
+
+
 @import 'top-section.scss';
 @import 'footer';
+
 
 // .top {
 //   display: flex;
@@ -19,6 +22,7 @@
 //   .top-content {
 //     display: flex;
 //     justify-content: center;
+
 //     .top-left {
 //       width: 60%;
 //       padding: 20px;
@@ -26,10 +30,12 @@
 //     .top-right {
 //       width: 30%;
 //       padding: 20px;
+
 //       // Panel styling
 //       .panel {
 //         width: 500px;
 //         // margin: auto;
+
 //         .MuiPaper-root {
 //           background-color: #0d6974;
 //           margin: 2px 0;
@@ -41,11 +47,13 @@
 //             background-color: gray;
 //           }
 //         }
+
 //         .MuiButtonBase-root {
 //           .MuiExpansionPanelSummary-root {
 //             height: 30px;
 //           }
 //         }
+
 //         .MuiExpansionPanelDetails-root {
 //           background-color: #ffffff;
 //         }
@@ -64,6 +72,9 @@
 //     }
 //   }
 // }
+.body {
+  scroll-behavior: smooth;
+}
 .top {
   background-image: $background-gradient;
   min-height: 600px;
@@ -568,19 +579,15 @@
   }
   @include tablet {
     .feature-card {
-      width: 100%;
       margin: auto;
       padding: auto;
     }
-  }
-  @include phone {
-    padding: auto;
-    margin: auto;
   }
 }
 
 // Buttons
 .button {
+ 
   font-weight: 600;
   font-size: 16px;
   text-align: center;
@@ -595,26 +602,18 @@
   max-width: 300px;
   margin: 20px auto 250px;
   @include tablet {
-    margin: 20px auto 200px;
+    margin: 20px auto 150px;
   }
 }
 .btn-md {
   max-width: 250px;
   margin-bottom: 200px;
-  @include phone {
-    margin-bottom: 250px;
-  }
-}
-.btn-intro {
-  max-width: 300px;
-  margin: 30px auto;
 }
 .button:hover {
   background-color: #16b383;
   cursor: pointer;
 }
 
-// Clients
 .clients {
   max-width: 1400px;
   background-image: $background-gradient;
@@ -624,7 +623,7 @@
   box-shadow: 0 64px 24px -50px rgba(0, 0, 0, 0.2);
   padding: 30px 0;
   p {
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 600;
     // padding: 40px 0 0;
   }
@@ -679,32 +678,12 @@
   }
   @include midsize {
     margin: auto 25px;
-    .logos-section {
-      flex-wrap: wrap;
-    }
     .client-logo {
-      width: 120px;
-    }
-  }
-  @include tablet {
-    p {
-      font-size: 20px;
-    }
-    .client-logo {
-      max-width: 100px;
-      margin: 0 15px;
-    }
-  }
-  @include phone {
-    .client-logo {
-      max-width: 20%;
-      margin: 0 10px;
+      width: 10%;
     }
   }
 }
-// Clients end
 
-// Partners start
 .partners {
   max-width: 1400px;
   background-image: $secondary-gradient;
@@ -720,7 +699,6 @@
   .logos-section {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
   }
   .partner-logo {
     max-width: 150px;
@@ -753,30 +731,10 @@
   @include midsize {
     margin: auto 25px;
     .partner-logo {
-      width: 150px;
-    }
-  }
-  @include tablet {
-    margin: auto 25px;
-    p {
-      font-size: 20px;
-    }
-    .partner-logo {
-      width: 120px;
-    }
-  }
-  @include phone {
-    margin: auto 25px;
-    max-height: 300px;
-    p {
-      font-size: 16px;
-    }
-    .partner-logo {
-      width: 100px;
+      width: 20%;
     }
   }
 }
-// Partners end
 
 .solution {
   max-width: 1400px;
@@ -871,6 +829,64 @@
   @include phone {
     .option-card {
       margin: 0 15px;
+    }
+  }
+}
+
+.organization {
+  max-width: 1400px;
+  background-color: white;
+  position: absolute;
+  color: black;
+  text-align: center;
+  box-shadow: 0 64px 24px -50px rgba(0, 0, 0, 0.2);
+  padding: 30px 0;
+  p {
+    font-size: 25px;
+    font-weight: 600;
+    // padding: 40px 0 0;
+  }
+  .logos-section {
+    display: flex;
+    justify-content: space-around;
+  }
+  .organization-logo {
+    max-width: 200px;
+  } 
+  .barclays {
+    content: url('/barclays-white.png');
+  }
+  .barclays:hover {
+    content: url('/barclays.png');
+  }
+ .sap {
+    content: url('/sap-black.png');
+  }
+.sap:hover {
+    content: url('/sap-blue.png');
+  }
+.airtel{
+   content : url('/airte_white.png')
+  }
+.airtel:hover{
+    content: url('/airtel.png')
+  }
+ .rbc{
+   content : url('/white_rbc.png')
+ }
+ .rbc:hover {
+   content : url('/rbc.png')
+ }
+ .gr{
+   content: url('/white_gr.png')
+ }
+ .gr:hover{
+   content : url('/Groupr.png')
+ }
+    @include midsize {
+    margin: auto;
+    .organization-logo {
+      width: 10%;
     }
   }
 }
