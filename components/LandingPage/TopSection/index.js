@@ -1,5 +1,7 @@
+
 import React from 'react'
 import Grid from "@material-ui/core/Grid"
+import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import {Toolbar} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -11,9 +13,7 @@ import  Usecases from './usecases'
 import Solacewith from './solacewith'
 import Company from './company'
 import { Tooltip } from '@material-ui/core'
-import Typer from '../../Typer'
 import dynamic from 'next/dynamic'
-import '../../../styles/top-section.scss'
 const ParticlesBackground = dynamic(() => import('./ParticlesBackground'), { ssr: false })
 
 const TopSection = () => {
@@ -35,7 +35,7 @@ const TopSection = () => {
     <div className="main-wrapper">
       <ParticlesBackground />
       <div className="container">
-        <Grid container spacing={8} justify="center">
+        <Grid container spacing={2} justify="center">
           <Grid item md={12}>
             <div className="navbar-1">
               <span className="sub-menu">Docs</span>

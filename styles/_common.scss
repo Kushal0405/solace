@@ -1,6 +1,16 @@
 $theme-color: #20c997;
 $background-gradient: linear-gradient(38deg, #20262b 34%, #3c4652 100%);
+$background-transparent-gradient: linear-gradient(
+  38deg,
+  #20262bdd 34%,
+  #3c4652dd 100%
+);
 $secondary-gradient: linear-gradient(131deg, #00c895 0%, #12b39b 52%);
+$secondary-transparent-gradient: linear-gradient(
+  131deg,
+  #00c895dd 0%,
+  #12b39bdd 52%
+);
 $serif-font: 'Times New Roman', Times, serif;
 $theme-font-color: #3f4955;
 

@@ -8,11 +8,12 @@ import Clients from '../components/LandingPage/Clients'
 import Partners from '../components/LandingPage/Partners'
 import Solution from '../components/LandingPage/Solution'
 import Options from '../components/LandingPage/Options'
-import TopSection from '../components/LandingPage/TopSection'
-import Footer from '../components/LandingPage/TopSection/footr'
 import Organization from '../components/LandingPage/organization'
 import Panel from '../components/LandingPage/Panel'
 import { Fade } from 'react-reveal'
+import TopSection from '../components/LandingPage/TopSection';
+import Footer from '../components/LandingPage/Footer/Footer'
+import FixedBottom from '../components/LandingPage/FixedBottom'
 
 const Index = () => {
   return (
@@ -137,6 +138,7 @@ const Index = () => {
         </div>
       </div>
       <Footer />
+      <FixedBottom />
     </div>
     </React.Fragment>
   )

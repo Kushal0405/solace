@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core'
 const Features = () => {
   return (
     <div className="fetaures">
-      <Grid container spacing={3} justify="flex-start">
+      <Grid container spacing={0} justify="flex-start">
         <Grid item sm={4}>
           <FeatureCard
             logo="/dynamic.svg"
