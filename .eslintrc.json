@@ -5,36 +5,35 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "standard"
     ],
-    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": false
+            "jsx": true
         },
         "ecmaVersion": 11,
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "unused-imports"
     ],
     "rules": {
-        "indent": [
-            "error",
-            2
+        "react/no-unescaped-entities": "off", // No error on not escaping characters
+        "unused-imports/no-unused-imports": "error", // Deletes unused imports
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
         ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            
-            "single",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "Yes"
-        ]
+        "import/default": "warning" // if file doesn't contain default export
+    },
+    "globals": {
+        "React": "writable"
     }
 }

@@ -1,40 +1,41 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import {Toolbar} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu'
 import { TiDownload } from 'react-icons/ti'
 import { FiSearch } from 'react-icons/fi'
-import Products from "./products"
-import  Usecases from './usecases'
+import Products from './products'
+import Usecases from './usecases'
 import Solacewith from './solacewith'
 import Company from './company'
 import { Tooltip } from '@material-ui/core'
 import dynamic from 'next/dynamic'
-import Blank from './'
+// import Trial from '../../trial'
+
 const ParticlesBackground = dynamic(() => import('./ParticlesBackground'), { ssr: false })
 
 const TopSection = () => {
   const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: 1,
+      flexGrow: 1
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(2)
     },
     title: {
       flexGrow: 1,
-      marginRight: "40px"
+      marginRight: '40px'
     }
-  }));
-  const classes = useStyles();
+  }))
+  const classes = useStyles()
 
   return (
     <div className="main-wrapper">
       <ParticlesBackground />
+      {/* {console.log("react")} */}
+      {/* <Blank /> */}
       <div className="container">
         <Grid container spacing={2} justify="center">
           <Grid item md={12}>
@@ -49,7 +50,7 @@ const TopSection = () => {
               <span className="sub-menu">Login</span>
               <span className="sub-menu"><FiSearch /></span>
             </div>
-         
+
             <div className="navbar-2">
               <Toolbar>
                 <Typography className={classes.title}>
@@ -70,7 +71,7 @@ const TopSection = () => {
           </Grid>
           <Grid item md={6}>
             <div className="left-side">
-              <h1 className="text-1">Building the digital backbone for real-time <Typer className="text-1" dataText={['Enterprises.', 'Startups.', 'Companies.']} /></h1>
+              <h1 className="text-1">Building the digital backbone for real-time enterprises.</h1>
               <h3 className="text-2">Everything you need to get your business events streaming on an <Tooltip style={{ width: '400px' }} placement="top" arrow={true} title={<React.Fragment>
                 <Typography color="inherit"><h4 style={{ color: 'white', borderColor: '#20c997' }}><u>Think of it as moderen mesaging middleware</u></h4></Typography>
                 <span>An event mesh is a configureable and dynamic infrastructure layer for distrubuting events among decoupled applications, cloud services and devices</span>
