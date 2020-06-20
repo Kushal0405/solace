@@ -1,19 +1,21 @@
-import React from 'react'
-import Grid from "@material-ui/core/Grid"
-import Typography from '@material-ui/core/Typography'
-import {Toolbar} from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
-import MenuIcon from '@material-ui/icons/Menu'
-import { TiDownload } from 'react-icons/ti'
-import { FiSearch } from 'react-icons/fi'
-import Products from "./products"
-import  Usecases from './usecases'
-import Solacewith from './solacewith'
-import Company from './company'
-import { Tooltip } from '@material-ui/core'
-import dynamic from 'next/dynamic'
-import '../../../styles/top-section.scss'
-const ParticlesBackground = dynamic(() => import('./ParticlesBackground'), { ssr: false })
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import { Toolbar } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import MenuIcon from "@material-ui/icons/Menu";
+import { TiDownload } from "react-icons/ti";
+import { FiSearch } from "react-icons/fi";
+import Products from "./products";
+import Usecases from "./usecases";
+import Solacewith from "./solacewith";
+import Company from "./company";
+import { Tooltip } from "@material-ui/core";
+import dynamic from "next/dynamic";
+import "../../../styles/top-section.scss";
+const ParticlesBackground = dynamic(() => import("./ParticlesBackground"), {
+  ssr: false,
+});
 
 const TopSection = () => {
   const useStyles = makeStyles((theme) => ({
@@ -25,8 +27,8 @@ const TopSection = () => {
     },
     title: {
       flexGrow: 1,
-      marginRight: "40px"
-    }
+      marginRight: "40px",
+    },
   }));
   const classes = useStyles();
 
@@ -45,47 +47,107 @@ const TopSection = () => {
               <span className="sub-menu">Support</span>
               <span className="sub-menu">Contact</span>
               <span className="sub-menu">Login</span>
-              <span className="sub-menu"><FiSearch /></span>
+              <span className="sub-menu">
+                <FiSearch />
+              </span>
             </div>
-         
+
             <div className="navbar-2">
               <Toolbar>
                 <Typography className={classes.title}>
-                  <img style={{ marginLeft: '-30px' }} src="https://cdn.solace.com/wp-content/uploads/2019/10/solace_logo_green.svg" width="200" height="70" />
+                  <img
+                    style={{ marginLeft: "-30px" }}
+                    src="https://cdn.solace.com/wp-content/uploads/2019/10/solace_logo_green.svg"
+                    width="200"
+                    height="70"
+                  />
                 </Typography>
-                <span className="navbar-2-links" color="inherit"> < Products /></span>
-                <span className="navbar-2-links" color="inherit"> <Usecases /></span>
-                <span className="navbar-2-links" color="inherit"> <Solacewith /></span>
-                <span className="navbar-2-links" color="inherit"> <Company /></span>
+                <span className="navbar-2-links" color="inherit">
+                  {" "}
+                  <Products />
+                </span>
+                <span className="navbar-2-links" color="inherit">
+                  {" "}
+                  <Usecases />
+                </span>
+                <span className="navbar-2-links" color="inherit">
+                  {" "}
+                  <Solacewith />
+                </span>
+                <span className="navbar-2-links" color="inherit">
+                  {" "}
+                  <Company />
+                </span>
                 <span className="menu-icon">
                   <MenuIcon />
                 </span>
-              </Toolbar>""
+              </Toolbar>
+              ""
             </div>
             <div className="covid-banner">
-              <p>Regarding COVID-19: Here’s what we’re doing to ensure the support and welfare of our employees, customers and partners. <span>Learn More</span></p>
+              <p>
+                Regarding COVID-19: Here’s what we’re doing to ensure the
+                support and welfare of our employees, customers and partners.{" "}
+                <span>Learn More</span>
+              </p>
             </div>
           </Grid>
           <Grid item md={6}>
             <div className="left-side">
-              <h1 className="text-1">Building the digital backbone for real-time Entriprises</h1>
-              <h3 className="text-2">Everything you need to get your business events streaming on an <Tooltip style={{ width: '500px' }} placement="top" arrow={true} title={<React.Fragment>
-                <Typography color="inherit"><h4 style={{ color: 'white', borderColor: '#20c997' , fontSize:'20px'}}><u>Think of it as moderen mesaging middleware</u></h4></Typography>
-                <h5 style={{fontSize:'15px', padding:'10px'}}>An event mesh is a configureable and dynamic infrastructure layer for distrubuting events among decoupled applications, cloud services and devices</h5>
-              </React.Fragment>}><span className="tooltip">event mesh</span></Tooltip>, plus what you need to discover, manage and govern them.</h3>
-              <p style={{ fontSize: '18px', color: 'white' }}> <TiDownload style={{ color: '00C895' }} /> Download <u>FREE</u> production-ready software</p>
+              <h1 className="text-1">
+                Building the digital backbone for real-time Entriprises
+              </h1>
+              <h3 className="text-2">
+                Everything you need to get your business events streaming on an{" "}
+                <Tooltip
+                  style={{ width: "500px" }}
+                  placement="top"
+                  arrow={true}
+                  title={
+                    <React.Fragment>
+                      <Typography color="inherit">
+                        <h4
+                          style={{
+                            color: "white",
+                            borderColor: "#20c997",
+                            fontSize: "20px",
+                          }}
+                        >
+                          <u>Think of it as moderen mesaging middleware</u>
+                        </h4>
+                      </Typography>
+                      <h5 style={{ fontSize: "15px", padding: "10px" }}>
+                        An event mesh is a configureable and dynamic
+                        infrastructure layer for distrubuting events among
+                        decoupled applications, cloud services and devices
+                      </h5>
+                    </React.Fragment>
+                  }
+                >
+                  <span className="tooltip">event mesh</span>
+                </Tooltip>
+                , plus what you need to discover, manage and govern them.
+              </h3>
+              <p style={{ fontSize: "18px", color: "white" }}>
+                {" "}
+                <TiDownload style={{ color: "00C895" }} /> Download <u>FREE</u>{" "}
+                production-ready software
+              </p>
             </div>
           </Grid>
           <Grid item md={6}>
             <div className="right-side">
-              <img src="https://play.vidyard.com/gJ2pSxSS9Ad3jpxaT2Q7Ly.jpg" className="intro-image" />
+              <img
+                src="https://play.vidyard.com/gJ2pSxSS9Ad3jpxaT2Q7Ly.jpg"
+                className="intro-image"
+              />
               <div className="button btn-intro">Request an event mesh demo</div>
             </div>
           </Grid>
         </Grid>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TopSection
+export default TopSection;

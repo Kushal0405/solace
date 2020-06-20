@@ -1,5 +1,5 @@
-import FeatureCard from '../UI/FeatureCard'
-import { Grid } from '@material-ui/core'
+import FeatureCard from "../UI/FeatureCard";
+import { Grid } from "@material-ui/core";
 
 const Features = () => {
   return (
@@ -30,7 +30,7 @@ const Features = () => {
         </Grid>
       </Grid>
     </div>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;

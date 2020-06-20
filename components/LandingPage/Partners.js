@@ -9,7 +9,7 @@ const Partners = () => {
         <img src="" className="partner-logo boomi" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Partners
+export default Partners;

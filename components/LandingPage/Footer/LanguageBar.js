@@ -17,7 +17,7 @@ const LanguageBar = () => {
         <span className="link">Sitemap</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LanguageBar
+export default LanguageBar;

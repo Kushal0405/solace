@@ -28,7 +28,7 @@
             "windows"
         ],
         "quotes": [
-            
+            "off",
             "single",
             "double"
         ],

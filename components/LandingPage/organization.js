@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core'
+import { Grid } from "@material-ui/core";
 
 const Organization = () => {
   return (
@@ -10,10 +10,9 @@ const Organization = () => {
         <img src="" className="organization-logo airtel" />
         <img src="" className="organization-logo rbc" />
         <img src="" className="organization-logo gr" />
-        
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Organization
+export default Organization;

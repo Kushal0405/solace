@@ -1,12 +1,20 @@
-import { FiArrowUp } from 'react-icons/fi'
+import { FiArrowUp } from "react-icons/fi";
 import {
-  FaFacebookSquare, FaLinkedin, FaTwitterSquare, FaYoutubeSquare, FaInstagram, FaMedium
-} from 'react-icons/fa'
+  FaFacebookSquare,
+  FaLinkedin,
+  FaTwitterSquare,
+  FaYoutubeSquare,
+  FaInstagram,
+  FaMedium,
+} from "react-icons/fa";
 
 const About = () => {
   return (
     <div className="about">
-      <a href="#"><span className="scroll-to-top"></span><FiArrowUp className="arrow" /></a>
+      <a href="#">
+        <span className="scroll-to-top"></span>
+        <FiArrowUp className="arrow" />
+      </a>
       <div className="content">
         <div className="links">
           <ul className="link-group">
@@ -40,7 +48,10 @@ const About = () => {
         <div className="newsletter">
           <img src="/solace.png" alt="" className="footer-logo" />
           <p className="signup-title">Newsletter Signup</p>
-          <p className="signup-text">Join 3,000 others receiving product updates + insights into the event-driven future.</p>
+          <p className="signup-text">
+            Join 3,000 others receiving product updates + insights into the
+            event-driven future.
+          </p>
           <input type="email" className="form-input" placeholder="Email" />
           <select className="form-input select" placeholder="Country">
             <option value="India">India</option>
@@ -60,7 +71,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

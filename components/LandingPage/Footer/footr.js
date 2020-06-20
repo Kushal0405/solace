@@ -1,33 +1,30 @@
-import React, { Component } from 'react'
-import { Container, Grid, TextField } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
-
+import React, { Component } from "react";
+import { Container, Grid, TextField } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 export default function Footer() {
-
-
   const useStyles = makeStyles((theme) => ({
     list: {
-      listStyleType: 'none',
-      color: 'white',
-      margin: '40px'
+      listStyleType: "none",
+      color: "white",
+      margin: "40px",
     },
     bottom: {
-
-      color: 'white',
-
-    }
+      color: "white",
+    },
   }));
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <div style={{ background: 'black' }}>
+      <div style={{ background: "black" }}>
         <Container>
-          <Grid container
+          <Grid
+            container
             direction="row"
             justify="space-evenly"
-            alignItems="center">
+            alignItems="center"
+          >
             <Grid item md={4}>
               <ul className={classes.list}>
                 <li>Products</li>
@@ -62,20 +59,31 @@ export default function Footer() {
               </ul>
             </Grid>
             <Grid item md={4}>
-
-              <img src="https://cdn.solace.com/wp-content/themes/orbit-media/resources/images/solace-logo-white.png" width="100" height="50" /><br></br>
-              <span className={classes.bottom}>Newsletter Signup</span><br></br>
-              <span className={classes.bottom}>Join 3,000 others receiving product updates + insights into the event-driven future.</span>
-              <span className={classes.bottom}> <TextField id="outlined-basic" size="small" variant="outlined" /></span>
-                          Support
-                          Contract
-                            Log In
-
-                  </Grid>
+              <img
+                src="https://cdn.solace.com/wp-content/themes/orbit-media/resources/images/solace-logo-white.png"
+                width="100"
+                height="50"
+              />
+              <br></br>
+              <span className={classes.bottom}>Newsletter Signup</span>
+              <br></br>
+              <span className={classes.bottom}>
+                Join 3,000 others receiving product updates + insights into the
+                event-driven future.
+              </span>
+              <span className={classes.bottom}>
+                {" "}
+                <TextField
+                  id="outlined-basic"
+                  size="small"
+                  variant="outlined"
+                />
+              </span>
+              Support Contract Log In
+            </Grid>
           </Grid>
         </Container>
       </div>
     </React.Fragment>
-  )
-
+  );
 }

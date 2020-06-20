@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core'
+import { Grid } from "@material-ui/core";
 
 const Clients = () => {
   return (
@@ -14,7 +14,7 @@ const Clients = () => {
         <img src="" className="client-logo node" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Clients
+export default Clients;

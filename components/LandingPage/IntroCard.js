@@ -76,8 +76,8 @@ const IntroCard = () => {
           <p className="inner-title dark">Encryption</p>
         </div>
       </div>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
-export default IntroCard
+export default IntroCard;
