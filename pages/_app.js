@@ -19,8 +19,6 @@ export default function MyApp(props) {
     <Fragment>
       <Head>
         <title>Advanced Event Broker. An event mesh for connected enterprises | Solace</title>
-        {/* <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" /> */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <CssBaseline /> {/* Base page with margin 0 */}
       <Component {...pageProps} />

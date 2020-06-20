@@ -1,0 +1,170 @@
+@import 'common';
+
+.main-wrapper {
+  // background-color: #2a3239;
+  position: relative;
+  min-height: 1000px;
+}
+
+canvas:first-of-type {
+  background-color: #2a3239;
+}
+
+.container {
+  opacity: 1;
+  // z-index: 3;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar-1 {
+  text-align: right;
+  padding: 20px;
+  .sub-menu {
+    color: #ffffff;
+    margin: 20px;
+    font-weight: 600;
+  }
+  .sub-menu:hover {
+    cursor: pointer;
+    color: $theme-color;
+  }
+  @include midsize {
+    display: none;
+  }
+}
+
+.navbar-2 {
+  .menu-icon {
+    display: none;
+  }
+  .menu-icon {
+    cursor: pointer;
+  }
+  @include midsize {
+    .navbar-2-links {
+      display: none;
+    }
+    .menu-icon {
+      color: #ffffff;
+      display: block;
+    }
+  }
+}
+
+.covid-banner {
+  width: 100%;
+  background-color: #ffffff;
+  opacity: 0.85;
+  height: auto;
+  font-size: 16px;
+  padding: 15px 25px;
+  line-height: 30px;
+  p {
+    color: #666;
+    margin: auto 0;
+  }
+  span {
+    font-weight: 700;
+    color: $theme-color;
+  }
+  span:hover {
+    color: #555;
+    cursor: pointer;
+  }
+  span::after {
+    content: ' ›';
+  }
+  @include tablet {
+    margin: 0 50px;
+    width: auto;
+  }
+}
+
+.left-side {
+  .text-1 {
+    color: $theme-color;
+    font-family: $serif-font;
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .text-2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  @include midsize {
+    .text-1 {
+      font-size: 48px;
+    }
+  }
+  @include tablet {
+    .text-1 {
+      font-size: 36px;
+    }
+    .text-2 {
+      font-size: 28px;
+    }
+  }
+  @include phone {
+    .text-1 {
+      font-size: 32px;
+    }
+    .text-2 {
+      font-size: 22px;
+    }
+  }
+}
+
+.right-side {
+  .intro-image {
+    width: 100%;
+    align-self: flex-end;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+}
+
+@include tablet {
+  .left-side {
+    margin: 50px;
+  }
+  .right-side {
+    margin: 50px;
+    .intro-image {
+      padding-left: 0;
+    }
+  }
+}
+// ----------------------------------------
+.tooltip {
+  border-bottom: 4px dotted;
+  cursor: help;
+  position: relative;
+}
+
+.tooltip-info {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+// ----------------------------------------
+
+// .popup {
+//   // min-width: 250px;
+// }
+
+.clear-button {
+  border: 2px solid white;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 30px;
+}
