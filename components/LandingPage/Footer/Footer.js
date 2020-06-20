@@ -1,6 +1,7 @@
 import Numbers from './Numbers'
 import UseCase from './UseCase'
 import About from './About'
+import LanguageBar from './LanguageBar'
 
 const Footer = () => {
   return (
@@ -8,6 +9,7 @@ const Footer = () => {
       <Numbers />
       <UseCase />
       <About />
+      <LanguageBar />
     </div>
   )
 }
